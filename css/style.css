@@ -118,6 +118,7 @@ body {
   font-size: 16px;
   background: var(--white-color);
   /* color: var(--black-color); */
+  scroll-behavior: smooth;
 }
 
 article,
@@ -197,22 +198,43 @@ button {
   margin: 0 auto;
 }
 
-.faq-title {
+section {
+  padding: 60px 0;
+}
+
+.section-title {
   font-size: 50px;
   font-weight: 900;
   margin-bottom: 60px;
 }
 
-.faq-title span {
+.section-title span {
   color: var(--green-color);
 }
 
 /* Шапка сайта */
 
 #header {
-  padding: 30px 0px 20px 0px;
-  /* margin-bottom: 20px; */
+  /* padding: 30px 0px 20px 0px; */
+  padding: 20px 0;
   border-bottom: 1px solid var(--gray-color-second);
+  background: var(--white-color);
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .header-wrapper {
@@ -432,28 +454,30 @@ button {
 /* Блок наши услуги */
 
 #services {
-  height: 600px;
-  padding: 60px;
   background: var(--gray-color-third);
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
+  position: relative;
 }
 
-.services-title {
-  font-size: 50px;
-  font-weight: 900;
-  /* text-align: center; */
-  margin-bottom: 30px;
+.space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.services-title span {
-  color: var(--green-color);
+.thumbnail {
+  /* position: absolute; */
+  width: 150px;
+  /* top: 20px;
+  right: 20%; */
 }
 
-.services-wrapper {
+.services-grid img {
+  width: 100%;
 }
 
 .services-tabs__block {
@@ -599,23 +623,6 @@ button {
 
 /* Стилизация этапы работы */
 
-#stage {
-  padding: 60px 0;
-}
-
-.stage-wrapper {
-}
-
-.stage-title {
-  font-size: 50px;
-  font-weight: 900;
-  margin-bottom: 60px;
-}
-
-.stage-title span {
-  color: var(--green-color);
-}
-
 .stage-wrapper__block {
   display: grid;
   grid-template-columns: repeat(2, minmax(450px, 1fr));
@@ -668,7 +675,6 @@ button {
 /* Стили блока тарифы */
 
 #rates {
-  padding: 60px 0;
   background: var(--gray-color-third);
   /* background: #101111; */
   border-radius: 30px;
@@ -818,10 +824,6 @@ button {
 
 /* Стили блока FAQ */
 
-#faq {
-  padding: 60px 0;
-}
-
 .accordion {
   height: 60px;
   margin: 0 auto;
@@ -905,8 +907,6 @@ button {
 
 #consult {
   background: var(--green-color);
-  height: 500px;
-  padding: 60px 0;
 }
 
 .consult-wrapper {

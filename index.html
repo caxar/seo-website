@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,7 +56,7 @@
     <!-- /Шапка -->
 
     <!-- Hero -->
-    <section id="hero">
+    <div id="hero">
       <div class="container">
         <div class="hero-wrapper">
           <div class="hero-wrapper-left">
@@ -101,17 +102,21 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- /Hero -->
 
     <!-- Приемущества -->
 
-    <section id="advantage">
+    <div id="advantage">
       <div class="container">
         <div class="advantage-wrapper">
           <!-- 1 -->
-          <div class="advantage-wrapper__item">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            class="advantage-wrapper__item"
+          >
             <div class="advantage-item__top">
               <img
                 class="advantage-item__img"
@@ -143,7 +148,11 @@
             </div>
           </div> -->
           <!-- 3 -->
-          <div class="advantage-wrapper__item">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+            class="advantage-wrapper__item"
+          >
             <div class="advantage-item__top">
               <img
                 class="advantage-item__img"
@@ -159,7 +168,11 @@
             </div>
           </div>
           <!-- 4 -->
-          <div class="advantage-wrapper__item">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            class="advantage-wrapper__item"
+          >
             <div class="advantage-item__top">
               <img
                 class="advantage-item__img"
@@ -176,7 +189,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- /Приемущества -->
 
@@ -184,8 +197,19 @@
 
     <section id="services">
       <div class="container">
-        <div class="services-title"><span>Наши</span> услуги</div>
-        <div class="services-wrapper">
+        <div class="space">
+          <div class="services-title section-title">
+            <span>Наши</span> услуги
+          </div>
+
+          <img class="services-grid" src="./image/big-purple-grid.svg" alt="" />
+        </div>
+
+        <div
+          class="services-wrapper"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <div class="services-tabs__block">
             <input
               class="services-tabs__item"
@@ -307,11 +331,15 @@
 
     <section id="stage">
       <div class="container">
-        <div class="stage-title">Этапы <span>работы</span></div>
+        <div class="stage-title section-title">Этапы <span>работы</span></div>
         <div class="stage-wrapper">
           <div class="stage-wrapper__block">
             <!-- 1 -->
-            <div class="stage-wrapper__item black">
+            <div
+              class="stage-wrapper__item black"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+            >
               <div class="stage-item__left">
                 <!-- <img src="./image/works-1.svg" alt="" /> -->
                 <div class="stage-left__title">01</div>
@@ -322,7 +350,11 @@
               </div>
             </div>
             <!-- 2 -->
-            <div class="stage-wrapper__item">
+            <div
+              class="stage-wrapper__item"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
               <div class="stage-item__left">
                 <!-- <img src="./image/works-1.svg" alt="" /> -->
                 <div class="stage-left__title">02</div>
@@ -333,7 +365,11 @@
               </div>
             </div>
             <!-- 3 -->
-            <div class="stage-wrapper__item">
+            <div
+              class="stage-wrapper__item"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
               <div class="stage-item__left">
                 <!-- <img src="./image/works-1.svg" alt="" /> -->
                 <div class="stage-left__title">03</div>
@@ -344,7 +380,11 @@
               </div>
             </div>
             <!-- 4 -->
-            <div class="stage-wrapper__item black">
+            <div
+              class="stage-wrapper__item black"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
               <div class="stage-item__left">
                 <!-- <img src="./image/works-1.svg" alt="" /> -->
                 <div class="stage-left__title">04</div>
@@ -364,7 +404,9 @@
     <!--  Тарифы -->
     <section id="rates">
       <div class="container">
-        <div class="rates-title">Пакетное решение выгоднее и эффективнее</div>
+        <div class="rates-title section-title">
+          <span>Стоимость</span> услуг
+        </div>
         <div class="rates-wrapper">
           <!-- 1 -->
           <div class="rates-wrapper__item">
@@ -406,7 +448,11 @@
             </div>
           </div>
           <!-- 2 -->
-          <div class="rates-wrapper__item middle">
+          <div
+            class="rates-wrapper__item middle"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
             <div class="rates-item__top">
               <div class="rates-item__title">Оптимальный</div>
               <div class="rates-item__price">145 000 руб</div>
@@ -521,8 +567,14 @@
     <!--  FAQ -->
     <section id="faq">
       <div class="container">
-        <div class="faq-title">Остались <span>вопросы?</span></div>
-        <div class="faq-wrapper">
+        <div class="faq-title section-title">
+          Остались <span>вопросы?</span>
+        </div>
+        <div
+          class="faq-wrapper"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <!--  -->
           <div class="accordion active">
             <div class="accordion_tab active">
@@ -626,6 +678,26 @@
     <!-- /Футер -->
 
     <!-- Скрипты -->
+    <!-- JQEURY -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Parallax   -->
+
+    <!-- Мой скрипт JS -->
     <script src="./js/main.js"></script>
+
+    <!-- Инициализация AOS анимации -->
+    <script>
+      AOS.init();
+    </script>
+
+    <script></script>
   </body>
 </html>
