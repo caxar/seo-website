@@ -606,31 +606,39 @@ button {
 .stage-wrapper {
 }
 
-.stage-wrapper__title {
+.stage-title {
   font-size: 50px;
   font-weight: 900;
   margin-bottom: 60px;
 }
 
-.stage-wrapper__title span {
+.stage-title span {
   color: var(--green-color);
 }
 
 .stage-wrapper__block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(450px, 1fr));
+  gap: 40px;
+  justify-content: center;
 }
 
 .stage-wrapper__item {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 30px 40px;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  /* background: var(--green-color); */
-  /* color: var(--white-color); */
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background: var(--green-color);
+  color: var(--white-color);
+  height: 160px;
+  gap: 40px;
+  box-shadow: 0px 10px 20px 0px rgba(78, 54, 215, 0.2);
 }
 
 .stage-wrapper__item.black {
@@ -641,19 +649,19 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .stage-left__title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 900;
 }
 
 .stage-item__left img {
   width: 80px;
 }
 .stage-item__right {
-  width: 50%;
+  /* width: 50%; */
   font-size: 17px;
 }
 
@@ -834,7 +842,6 @@ button {
   font-size: 23px;
   font-weight: 600;
   /* text-transform: uppercase; */
-  letter-spacing: 2px;
   position: relative;
   border-bottom: 1px solid var(--gray-color-second);
 }
@@ -893,3 +900,221 @@ button {
   font-size: 14px;
   line-height: 20px;
 } */
+
+/* СТили блока констультация */
+
+#consult {
+  background: var(--green-color);
+  height: 500px;
+  padding: 60px 0;
+}
+
+.consult-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white-color);
+}
+
+.consult-wrapper__text {
+  /* width: 50%; */
+}
+
+.consult-text__title {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.consult-text__title span {
+  color: var(--black-color-second);
+}
+
+.consult-text__subtitle {
+  font-size: 17px;
+}
+
+.consult-wrapper__form {
+  /* width: 50%; */
+}
+.consult-wrapper__form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.consult-wrapper__form form label {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.consult-wrapper__form form input {
+  padding: 18px 20px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.consult-wrapper__form form input::placeholder {
+  /* color: var(--gray-color); */
+}
+
+.consult-wrapper__form form button {
+  background: var(--black-color-second);
+  color: var(--white-color);
+  padding: 22px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.consult-form__personal a {
+  border-bottom: 1px solid var(--white-color);
+  color: var(--white-color);
+}
+
+/* Стили для футер */
+
+.footer {
+  background: var(--black-color-second);
+  /* background: var(--gray-color-third); */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 60px 0;
+  /* height: 500px; */
+  color: var(--white-color);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-wrapper__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-wrapper__top ul {
+}
+.footer-wrapper__top ul li {
+  margin-bottom: 8px;
+}
+
+.footer-wrapper__top ul li a {
+  color: var(--white-color);
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.footer-wrapper__top ul li a:hover {
+  color: var(--green-color);
+}
+
+.footer-top__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-top__schema {
+}
+
+.footer-top__logo {
+  width: 230px;
+  /* margin-bottom: 10px; */
+}
+.footer-top__logo img {
+  width: 100%;
+}
+
+.footer-top__mail,
+.footer-top__phone {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.footer-top__mail:hover,
+.footer-top__phone:hover {
+  color: var(--green-color);
+}
+
+.footer-top__social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-social__item {
+  width: 40px;
+  height: 40px;
+  background: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.footer-social__item:hover {
+  background: var(--green-color);
+}
+
+.footer-social__item img {
+  width: 70%;
+}
+.footer-wrapper__bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-color-four);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray-color);
+}
+.footer-bottom__copyright {
+}
+
+.footer-bottom__link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-bottom__link a {
+  color: var(--gray-color);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.footer-bottom__link a:hover {
+  color: var(--green-color);
+}

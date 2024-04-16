@@ -41,9 +41,9 @@
               <li class="nav-menu__item">
                 <a href="">FAQ</a>
               </li>
-              <li class="nav-menu__item">
+              <!-- <li class="nav-menu__item">
                 <a href="">Контакты</a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="header-wrapper__links">
@@ -307,50 +307,51 @@
 
     <section id="stage">
       <div class="container">
+        <div class="stage-title">Этапы <span>работы</span></div>
         <div class="stage-wrapper">
-          <div class="stage-wrapper__title">Этапы <span>работы</span></div>
           <div class="stage-wrapper__block">
             <!-- 1 -->
             <div class="stage-wrapper__item black">
               <div class="stage-item__left">
-                <img src="./image/works-1.svg" alt="" />
-                <div class="stage-left__title">
-                  Знакомство и постановка задач
-                </div>
+                <!-- <img src="./image/works-1.svg" alt="" /> -->
+                <div class="stage-left__title">01</div>
               </div>
               <div class="stage-item__right">
-                Сбор информации о сайте, определение списка задач.
+                Знакомство и постановка задач сбор информации о сайте,
+                определение списка задач.
               </div>
             </div>
             <!-- 2 -->
             <div class="stage-wrapper__item">
               <div class="stage-item__left">
-                <img src="./image/works-1.svg" alt="" />
-                <div class="stage-left__title">Анализ сайта</div>
+                <!-- <img src="./image/works-1.svg" alt="" /> -->
+                <div class="stage-left__title">02</div>
               </div>
               <div class="stage-item__right">
-                Оценка технического состояния, SEO-оптимизации, индексации,
-                юзабилити.
+                Анализ сайт: оценка технического состояния, SEO-оптимизации,
+                индексации, юзабилити.
               </div>
             </div>
             <!-- 3 -->
-            <div class="stage-wrapper__item black">
+            <div class="stage-wrapper__item">
               <div class="stage-item__left">
-                <img src="./image/works-1.svg" alt="" />
-                <div class="stage-left__title">Анализ конкурентов</div>
+                <!-- <img src="./image/works-1.svg" alt="" /> -->
+                <div class="stage-left__title">03</div>
               </div>
               <div class="stage-item__right">
-                Исследование сайтов с высокой видимостью в поиске.
+                Анализ конкурентов:исследование сайтов с высокой видимостью в
+                поиске.
               </div>
             </div>
             <!-- 4 -->
-            <div class="stage-wrapper__item">
+            <div class="stage-wrapper__item black">
               <div class="stage-item__left">
-                <img src="./image/works-1.svg" alt="" />
-                <div class="stage-left__title">Составление плана работ</div>
+                <!-- <img src="./image/works-1.svg" alt="" /> -->
+                <div class="stage-left__title">04</div>
               </div>
               <div class="stage-item__right">
-                Определение сроков продвижения и стоимости SEO.
+                Составление плана работ определение сроков продвижения и
+                стоимости SEO.
               </div>
             </div>
           </div>
@@ -485,6 +486,38 @@
     </section>
     <!--  /Тарифы -->
 
+    <section id="consult">
+      <div class="container">
+        <div class="consult-wrapper">
+          <div class="consult-wrapper__text">
+            <div class="consult-text__title">
+              Получить <br />
+              <span>консультацию</span>
+            </div>
+            <div class="consult-text__subtitle">
+              Оставьте заявку на консультацию и мы свяжемся с вами.
+            </div>
+          </div>
+          <div class="consult-wrapper__form">
+            <form action="">
+              <label for="">Введите ваше имя</label>
+              <input type="text" placeholder="Пример: Вася" />
+
+              <label for="">Ваш номер телефона</label>
+              <input type="text" placeholder="Пример: +7 (000) 000-00-00" />
+
+              <button type="">Отправить</button>
+
+              <div class="consult-form__personal">
+                Нажимая на кнопку, вы соглашаетесь на
+                <a href="">обработку персональных данных</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!--  FAQ -->
     <section id="faq">
       <div class="container">
@@ -550,7 +583,46 @@
     <!-- /FAQ -->
 
     <!-- Футер -->
-    <footer>Footer</footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-wrapper__top">
+            <div class="footer-top__info">
+              <div class="footer-top__logo">
+                <img src="./image/footer-logo-white.png" alt="" />
+              </div>
+              <div class="footer-top__mail">test@mail.ru</div>
+              <a class="footer-top__phone"> +7 (000) 000-00-00 </a>
+              <div class="footer-top__social">
+                <!-- 1 -->
+                <a class="footer-social__item">
+                  <img src="./image/social-telegram.svg" alt="" />
+                </a>
+                <!-- 2 -->
+                <a class="footer-social__item">
+                  <img src="./image/social-whatsapp.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="footer-top__schema">
+              <ul>
+                <li><a href="">Наши услуги</a></li>
+                <li><a href="">Как это работает</a></li>
+                <li><a href="">Тарифы</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-wrapper__bottom">
+            <div class="footer-bottom__copyright">SEO оптимум © 2024</div>
+            <div class="footer-bottom__link">
+              <a href="">Договор оферты</a>
+              <a href="">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- /Футер -->
 
     <!-- Скрипты -->
