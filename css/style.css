@@ -1193,7 +1193,7 @@ body.sidebar-opened {
   height: 100%;
   right: -300px;
   top: 0;
-  background: #2f3442;
+  background: var(--white-color);
   transition: right 0.4s ease;
   overflow: auto;
 }
@@ -1202,7 +1202,44 @@ body.sidebar-opened {
   right: 0px;
 }
 
-/* keyframes */
+.mobile-menu__content {
+  padding: 50px 25px 30px 25px;
+  position: relative;
+}
+
+.mobile-menu__img {
+  margin-bottom: 30px;
+}
+
+.mobile-menu__img img {
+  width: 180px;
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.mobile-content__nav {
+}
+
+.mobile-content__item {
+  margin-bottom: 15px;
+}
+
+.mobile-content__item a {
+  font-size: 18px;
+  color: var(--black-color-second);
+}
+
+.mobile-content__form button {
+  width: 100%;
+  background: var(--green-color);
+  color: var(--white-color);
+}
+
+/* keyframes animation */
 
 @-webkit-keyframes slideInLeft {
   0% {

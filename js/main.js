@@ -155,7 +155,7 @@ jQuery(document).ready(function ($) {
     $("body").toggleClass("sidebar-opened");
   });
 
-  $(".text-close").click(function () {
+  $(".mobile-menu__close").click(function () {
     $(".hidden-overley").toggleClass("show");
     $(".mobile-menu").toggleClass("show");
     $(".pushmenu").toggleClass("open");
