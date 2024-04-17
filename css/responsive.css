@@ -1,0 +1,115 @@
+@media (max-width: 1250px) {
+  .rates-nav__ticket {
+    padding: 3px;
+  }
+}
+@media (max-width: 1150px) {
+  .container {
+    max-width: 1024px;
+  }
+  .hero-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  .hero-wrapper-left {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-wrapper-right {
+    width: 100%;
+  }
+  .advantage-item__title,
+  .tabs-area__title {
+    font-size: 20px;
+    text-wrap: balance;
+  }
+  .advantage-item__img {
+    width: 40px;
+  }
+  .tabs-area__item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: unset !important;
+    max-width: none;
+    padding: 0px 15px;
+  }
+  .header-wrapper__nav,
+  .header-wrapper__links {
+    display: none;
+  }
+  .header-wrapper__mobile {
+    display: block;
+  }
+  .header-wrapper {
+    justify-content: space-between;
+  }
+  #header.sticky {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  #header {
+    padding: 10px 0;
+  }
+  .advantage-wrapper {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  .section-title,
+  .consult-text__title {
+    font-size: 42px;
+  }
+  .services-tabs__label {
+    font-size: 17px;
+  }
+  .services-tabs__area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stage-wrapper__block {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .hero-left__title {
+    font-size: 42px;
+  }
+  .hero-left__subtitle {
+    font-size: 17px;
+  }
+  .rates-wrapper {
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .rates-wrapper__item {
+    width: 450px;
+  }
+}
+
+@media (max-width: 890px) {
+  .consult-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 800px) {
+}
+
+@media (max-width: 768px) {
+  .advantage-wrapper,
+  .services-tabs__area {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .footer-bottom__link a {
+    text-align: center;
+  }
+  .rates-wrapper__item {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+}

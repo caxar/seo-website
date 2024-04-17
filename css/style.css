@@ -301,6 +301,10 @@ section {
   width: 100%;
 }
 
+.header-wrapper__mobile {
+  display: none;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -458,7 +462,7 @@ section {
 
 .advantage-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -548,7 +552,7 @@ section {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  padding: 0px 40px;
+  padding: 15px 30px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -575,16 +579,18 @@ section {
 .tabs-area__title {
   font-size: 22px;
   font-weight: 600;
-  height: 60px;
+  max-height: 100px;
+  height: 90px;
   display: flex;
   align-items: center;
 }
 .tabs-area__subtitle {
+  display: flex;
+  align-items: center;
   font-size: 17px;
-
   color: var(--gray-color);
-
   text-wrap: balance;
+  height: 100px;
 }
 .tabs-area__btn {
   background: var(--green-color);
@@ -738,7 +744,7 @@ section {
 }
 
 .rates-wrapper__item {
-  height: 500px;
+  height: 450px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -1155,4 +1161,70 @@ section {
 
 .footer-bottom__link a:hover {
   color: var(--green-color);
+}
+
+/* Стили мобильное меню */
+
+body.sidebar-opened {
+  overflow: hidden;
+}
+.hidden-overley {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #000000;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: opacity 1s;
+}
+.hidden-overley.show {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  width: 300px;
+  height: 100%;
+  right: -300px;
+  top: 0;
+  background: #2f3442;
+  transition: right 0.4s ease;
+  overflow: auto;
+}
+
+.mobile-menu.show {
+  right: 0px;
+}
+
+/* keyframes */
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(345px, 0, 0);
+    transform: translate3d(345px, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(345px, 0, 0);
+    transform: translate3d(345px, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
 }

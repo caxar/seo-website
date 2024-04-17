@@ -144,3 +144,39 @@ window.onscroll = function () {
     button.style.backgroundColor = "#000";
   }
 };
+
+// Срипт открытие меню в моб версии
+jQuery(document).ready(function ($) {
+  // Клик по кнопке-гамбургеру открывает меню, повторный клик закрывает
+  $(".pushmenu").click(function () {
+    $(".pushmenu").toggleClass("open");
+    $(".mobile-menu").toggleClass("show");
+    $(".hidden-overley").toggleClass("show");
+    $("body").toggleClass("sidebar-opened");
+  });
+
+  $(".text-close").click(function () {
+    $(".hidden-overley").toggleClass("show");
+    $(".mobile-menu").toggleClass("show");
+    $(".pushmenu").toggleClass("open");
+    $("body").toggleClass("sidebar-opened");
+  });
+  // Когда панель открыта, клик по облсти вне панели закрывает ее
+  $(".hidden-overley").click(function () {
+    $(this).toggleClass("show");
+    $(".mobile-menu").toggleClass("show");
+    $(".pushmenu").toggleClass("open");
+    $("body").toggleClass("sidebar-opened");
+  });
+  // меняем активность пункта меню по клику (НЕОБЯЗАТЕЛЬНО)
+  $(".mobile-menu ul li").click(function () {
+    $(this)
+      .addClass("current-menu-item")
+      .siblings()
+      .removeClass("current-menu-item");
+    $(".mobile-menu").toggleClass("show");
+    $(".pushmenu").toggleClass("open");
+    $("body").toggleClass("sidebar-opened");
+    $(".hidden-overley").toggleClass("show");
+  });
+});
