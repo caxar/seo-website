@@ -110,6 +110,54 @@
   .rates-wrapper__item {
     width: 100%;
   }
+  .hero-wrapper-right {
+    padding: 20px 10px;
+  }
+  .hero-left__title {
+    font-size: 35px;
+  }
+  .services-tabs__content {
+    padding: 0;
+  }
+  .footer-wrapper__top {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-top__info,
+  .footer-wrapper__top ul {
+    align-items: center;
+  }
+  .footer-wrapper__bottom {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 @media (max-width: 425px) {
+  .hero-active__btn {
+    padding: 10px;
+  }
+  .hero-active__btn span {
+    display: none;
+  }
+  .hero-btn__icon {
+    display: block;
+  }
+  .hero-active__icon {
+    display: none;
+  }
+  .hero-right__gif {
+    display: none;
+  }
+  .stage-wrapper__item {
+    padding: 20px;
+  }
+  .accordion.active {
+    height: 100%;
+  }
+  .accordion .accordion_tab {
+    font-size: 20px;
+  }
+  .accordion .accordion_tab {
+    padding: 10px;
+  }
 }

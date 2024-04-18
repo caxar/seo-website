@@ -454,6 +454,10 @@ section {
   color: var(--white-color);
 }
 
+.hero-btn__icon {
+  display: none;
+}
+
 /* Стили Основные приемущества */
 
 #advantage {
@@ -1026,13 +1030,12 @@ section {
 /* Стили для футер */
 
 .footer {
-  background: var(--black-color-second);
-  /* background: var(--gray-color-third); */
+  background: var(--gray-color-four);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding: 60px 0;
   /* height: 500px; */
-  color: var(--white-color);
+  color: var(--black-color-second);
 }
 
 .footer-wrapper {
@@ -1054,7 +1057,7 @@ section {
 }
 
 .footer-wrapper__top ul li a {
-  color: var(--white-color);
+  color: var(--black-color-second);
   font-size: 20px;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1109,7 +1112,7 @@ section {
 .footer-social__item {
   width: 40px;
   height: 40px;
-  background: var(--white-color);
+  background: var(--black-color-second);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1135,7 +1138,7 @@ section {
 }
 .footer-wrapper__bottom {
   padding-top: 20px;
-  border-top: 1px solid var(--gray-color-four);
+  border-top: 1px solid var(--black-color-second);
   display: flex;
   align-items: center;
   justify-content: space-between;
