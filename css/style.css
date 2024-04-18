@@ -1242,6 +1242,134 @@ body.sidebar-opened {
   color: var(--white-color);
 }
 
+/* Стили блока 404 */
+
+.error-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.error-wrapper__img {
+}
+.error-wrapper__text {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  text-wrap: balance;
+}
+.error-wrapper__btn {
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  background: var(--green-color);
+  color: var(--white-color);
+}
+
+.error-wrapper__btn:hover {
+  background: var(--black-color-second);
+}
+
+/* Стили для блока проверка сайта */
+
+#response_an_text {
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+}
+
+#response_an_text tbody tr {
+  border-bottom: 1px solid var(--gray-color);
+}
+
+#response_an_text tbody tr td {
+  padding: 10px 15px;
+  font-size: 15px;
+}
+#response_an_text thead tr th {
+  padding: 10px 15px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.check-services {
+}
+
+.check-services__status.fullfilled {
+}
+.check-services__status.resolve {
+}
+
+.check-services__status.fullfilled img {
+  width: 30px;
+}
+.check-services__status.resolve img {
+  width: 30px;
+}
+
+.check-services__title {
+  width: 100%;
+  font-weight: 600;
+}
+
+.check-services__text {
+  width: 100%;
+}
+
+.check-services__text p {
+  margin-bottom: 22px;
+  font-weight: 500;
+  flex-wrap: balance;
+}
+
+.check-services__text pre.check-text__reject {
+  border-left: 2px solid #f94144;
+  color: var(--white-color);
+  font-weight: 500;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #f94144;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.check-services__text pre.check-text__fullfiled {
+  border-left: 2px solid var(--green-color);
+  color: var(--white-color);
+  font-weight: 500;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: var(--green-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.check-services__text .alert-message-success {
+  /* background: var(--green-color);
+  color: var(--white-color); */
+  border-left: 2px solid var(--gray-color);
+  padding: 10px;
+}
+
 /* keyframes animation */
 
 @-webkit-keyframes slideInLeft {

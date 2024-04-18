@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>SEO</title>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header id="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="header-wrapper__logo">
+            <!-- <span>SEO</span> оптимум -->
+            <a href="/">
+              <img src="./image/header-logo-green-1.png" alt="" />
+            </a>
+          </div>
+          <div class="header-wrapper__nav">
+            <ul class="nav-menu">
+              <!-- <li class="nav-menu__item">
+                      <a href="">Главная</a>
+                    </li> -->
+              <li class="nav-menu__item">
+                <a href="#services">Наши услуги</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="#stage">Как это работает</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="#rates">Тарифы</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="#faq">FAQ</a>
+              </li>
+              <!-- <li class="nav-menu__item">
+                      <a href="">Контакты</a>
+                    </li> -->
+            </ul>
+          </div>
+          <div class="header-wrapper__links">
+            <button class="header-links__btn">Обсудить задачу</button>
+          </div>
+
+          <div class="header-wrapper__mobile pushmenu opened">
+            <img src="./image/menu-mobile.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Шапка -->
+
+    <section class="error">
+      <div class="container">
+        <div class="error-wrapper">
+          <div class="error-wrapper__img">
+            <img src="./image/404.png" alt="" />
+          </div>
+          <div class="error-wrapper__text">
+            Упс... Кажется, что такая страница не найдена. <br />
+            Возвращайтесь на главную!
+          </div>
+          <a href="/" class="error-wrapper__btn">На главную</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-wrapper__top">
+            <div class="footer-top__info">
+              <div class="footer-top__logo">
+                <img src="./image/header-logo-green-1.png" alt="" />
+              </div>
+              <div class="footer-top__mail">test@mail.ru</div>
+              <a class="footer-top__phone"> +7 (000) 000-00-00 </a>
+              <div class="footer-top__social">
+                <!-- 1 -->
+                <a class="footer-social__item">
+                  <img src="./image/social-telegram.svg" alt="" />
+                </a>
+                <!-- 2 -->
+                <a class="footer-social__item">
+                  <img src="./image/social-whatsapp.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="footer-top__schema">
+              <ul>
+                <li><a href="">Наши услуги</a></li>
+                <li><a href="">Как это работает</a></li>
+                <li><a href="">Тарифы</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-wrapper__bottom">
+            <div class="footer-bottom__copyright">SEO оптимум © 2024</div>
+            <div class="footer-bottom__link">
+              <a href="">Договор оферты</a>
+              <a href="">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Футер -->
+
+    <!-- Кнопка наверх -->
+    <div class="btn-scroll">
+      <div class="btn-scroll_content">наверх</div>
+    </div>
+
+    <!-- мобильное меню -->
+    <div class="mobile-menu">
+      <div class="mobile-menu__content">
+        <div class="mobile-menu__close">
+          <img src="./image/mobile-close.svg" alt="" />
+        </div>
+        <div class="mobile-menu__img">
+          <img src="./image/header-logo-green-1.png" alt="" />
+        </div>
+        <ul class="mobile-content__nav">
+          <li class="mobile-content__item">
+            <a href="#services">Наши услуги</a>
+          </li>
+          <li class="mobile-content__item">
+            <a href="#stage">Как это работает</a>
+          </li>
+          <li class="mobile-content__item">
+            <a href="#rates">Тарифы</a>
+          </li>
+          <li class="mobile-content__item">
+            <a href="#faq">FAQ</a>
+          </li>
+        </ul>
+        <div class="mobile-content__form">
+          <button>Обсудить задачу</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden-overley"></div>
+
+    <!-- Скрипты -->
+    <!-- JQEURY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+    <!-- AOS animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Parallax   -->
+
+    <!-- Мой скрипт JS -->
+    <script src="./js/main.js"></script>
+
+    <!-- Инициализация AOS анимации -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
