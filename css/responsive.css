@@ -30,6 +30,16 @@
   .tabs-area__item {
     padding: 15px;
   }
+
+  /* fsfs */
+  .check-services__status {
+    display: flex;
+    align-items: center;
+  }
+
+  table thead {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -114,7 +124,7 @@
     padding: 20px 10px;
   }
   .hero-left__title {
-    font-size: 35px;
+    font-size: 30px;
   }
   .services-tabs__content {
     padding: 0;
@@ -130,6 +140,12 @@
   .footer-wrapper__bottom {
     flex-wrap: wrap;
     gap: 10px;
+  }
+  .modal-content {
+    width: 90%;
+  }
+  .hero-right__title {
+    font-size: 22px;
   }
 }
 @media (max-width: 425px) {
@@ -149,7 +165,7 @@
     display: none;
   }
   .stage-wrapper__item {
-    padding: 20px;
+    padding: 7px;
   }
   .accordion.active {
     height: 100%;
@@ -159,5 +175,11 @@
   }
   .accordion .accordion_tab {
     padding: 10px;
+  }
+  .modal-content {
+    padding: 40px 15px;
+  }
+  .rates-nav__link {
+    flex-direction: column;
   }
 }

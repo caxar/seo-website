@@ -180,3 +180,29 @@ jQuery(document).ready(function ($) {
     $(".hidden-overley").toggleClass("show");
   });
 });
+
+// Открытие и закрытие модального окна
+
+// header-links__btn
+
+let modal = document.querySelector(".modal");
+let trigger = document.querySelector(".header-links__btn");
+let triggerSecond = document.querySelector(".mobile-content__link");
+let closeButton = document.querySelector(".modal-content__close");
+
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+  $(".mobile-menu").removeClass("show");
+  $(".hidden-overley").removeClass("show");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+
+trigger.addEventListener("click", toggleModal);
+triggerSecond.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);

@@ -107,7 +107,7 @@ video {
   outline: none;
 }
 html {
-  height: 101%;
+  height: 100%;
   scrollbar-width: thin;
   scrollbar-color: var(--green-color) var(--gray-color-third);
   scroll-behavior: smooth;
@@ -1175,7 +1175,7 @@ body.sidebar-opened {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 19;
   background: #000000;
   opacity: 0;
   width: 0;
@@ -1191,7 +1191,7 @@ body.sidebar-opened {
 
 .mobile-menu {
   position: fixed;
-  z-index: 100;
+  z-index: 20;
   width: 300px;
   height: 100%;
   right: -300px;
@@ -1286,31 +1286,29 @@ body.sidebar-opened {
 
 /* Стили для блока проверка сайта */
 
+.sortTableMiniNew {
+  width: 100%;
+  overflow-x: auto;
+}
+
 #response_an_text {
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
   padding: 20px 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 #response_an_text tbody tr {
   border-bottom: 1px solid var(--gray-color);
 }
 
-#response_an_text tbody tr td {
-  padding: 10px 15px;
-  font-size: 15px;
-}
 #response_an_text thead tr th {
   padding: 10px 15px;
   font-size: 17px;
   font-weight: 600;
-}
-
-.check-services {
-}
-
-.check-services__status.fullfilled {
-}
-.check-services__status.resolve {
 }
 
 .check-services__status.fullfilled img {
@@ -1327,12 +1325,17 @@ body.sidebar-opened {
 
 .check-services__text {
   width: 100%;
+  padding: 10px 15px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.check-services__text p {
+.check-services__subtitle {
   margin-bottom: 22px;
   font-weight: 500;
-  flex-wrap: balance;
+  text-wrap: balance;
 }
 
 .check-services__text pre.check-text__reject {
@@ -1350,7 +1353,6 @@ body.sidebar-opened {
 }
 
 .check-services__text pre.check-text__fullfiled {
-  border-left: 2px solid var(--green-color);
   color: var(--white-color);
   font-weight: 500;
   padding: 10px;
@@ -1368,6 +1370,113 @@ body.sidebar-opened {
   color: var(--white-color); */
   border-left: 2px solid var(--gray-color);
   padding: 10px;
+}
+
+/* Стили модального окна */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 20;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--gray-color-third);
+  padding: 40px 30px;
+  /* width: 50%; */
+  width: 550px;
+  height: 450px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content__close {
+  width: 40px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+.modal-content__close img {
+  width: 100%;
+}
+
+.form-content__link {
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  text-wrap: balance;
+}
+.form-content__link a {
+  border-bottom: 1px solid var(--green-color);
+  color: var(--green-color);
+}
+
+.modal-content__title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.modal-content__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.form-content__btn {
+  width: 100%;
+  /* border: 1px solid var(--black-color-second); */
+  background: var(--green-color);
+  padding: 20px;
+  color: var(--white-color);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.form-content__btn:hover {
+  background: var(--black-color-second);
+  color: var(--white-color);
+}
+
+.modal-content__form input {
+  /*border: 1px solid var(--gray-color);
+  */
+  border: 1px solid transparent;
+  /* border-bottom: 1px solid var(--gray-color); */
+  border-radius: 30px;
+  width: 100%;
+  padding: 20px 20px;
+  font-size: 17px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 
 /* keyframes animation */
