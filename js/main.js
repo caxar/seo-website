@@ -183,8 +183,6 @@ jQuery(document).ready(function ($) {
 
 // Открытие и закрытие модального окна
 
-// header-links__btn
-
 let modal = document.querySelector(".modal");
 let trigger = document.querySelector(".header-links__btn");
 let triggerSecond = document.querySelector(".mobile-content__link");
@@ -206,3 +204,56 @@ trigger.addEventListener("click", toggleModal);
 triggerSecond.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+// Открытие и закрытие модального Успешная отправка данных
+let modalSucsess = document.querySelector(".modal-success");
+// let trigger = document.querySelector(".header-links__btn");
+// let triggerSecond = document.querySelector(".mobile-content__link");
+let closeBtnSuccess = document.querySelector(".modal-success__close");
+
+function toggleModal() {
+  modalSucsess.classList.toggle("show-modal");
+  $(".hidden-overley").removeClass("show");
+}
+
+function windowOnClick(event) {
+  if (event.target === modalSucsess) {
+    toggleModal();
+  }
+}
+
+// trigger.addEventListener("click", toggleModal);
+// triggerSecond.addEventListener("click", toggleModal);
+closeBtnSuccess.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+// ДЛя parallax эффекта картинок
+
+const wrapper = document.querySelector(".parallax-effect");
+const layers = document.querySelectorAll(".parallax__layer");
+
+const handleParallax = (evt) => {
+  //размер области просмотра
+  const parallaxLeftOffset = wrapper.getBoundingClientRect().left;
+  const parallaxTopOffset = wrapper.getBoundingClientRect().top;
+
+  // координаты центра экрана
+  const coordX = evt.clientX - parallaxLeftOffset - 0.5 * wrapper.offsetWidth;
+  const coordY = evt.clientY - parallaxTopOffset - 0.5 * wrapper.offsetHeight;
+
+  layers.forEach((layer) => {
+    const layerSpeed = layer.dataset.speed;
+    const x = -(coordX * layerSpeed).toFixed(2);
+    const y = -(coordY * layerSpeed).toFixed(2);
+    layer.setAttribute("style", `transform: translate(${x}px, ${y}px);`);
+  });
+};
+
+const reset = () => {
+  layers.forEach((layer) => {
+    layer.removeAttribute("style");
+  });
+};
+
+wrapper.addEventListener("mousemove", handleParallax);
+wrapper.addEventListener("mouseout", reset);

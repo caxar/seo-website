@@ -60,7 +60,7 @@
     <!-- /Шапка -->
 
     <!-- Hero -->
-    <div id="hero">
+    <div id="hero" class="parallax-effect">
       <div class="container">
         <div class="hero-wrapper">
           <div class="hero-wrapper-left">
@@ -112,6 +112,17 @@
             </div>
           </div>
         </div>
+        <!--  -->
+        <!-- <div class="parallax">
+          <div class="parallax-inner">
+            <img
+              src="./image/big-green-grid.svg"
+              class="parallax__layer circle"
+              data-speed="0.18"
+              alt=""
+            />
+          </div>
+        </div> -->
       </div>
     </div>
 
@@ -630,7 +641,12 @@
 
     <section id="consult">
       <div class="container">
-        <div class="consult-wrapper">
+        <div
+          class="consult-wrapper"
+          class="faq-wrapper"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <div class="consult-wrapper__text">
             <div class="consult-text__title">
               Получить <br />
@@ -676,8 +692,8 @@
           data-aos-anchor-placement="top-bottom"
         >
           <!--  -->
-          <div class="accordion active">
-            <div class="accordion_tab active">
+          <div class="accordion">
+            <div class="accordion_tab">
               Я хочу сам разобраться
               <div class="accordion_arrow">
                 <img src="./image/arrow-up.svg" alt="" />
@@ -734,6 +750,20 @@
     </section>
     <!-- /FAQ -->
 
+    <!-- <div class="parallax">
+      <div class="parallax__inner">
+        <h1 class="parallax__layer title" data-speed="0.03">
+          Здорово быть енотом!
+        </h1>
+
+        <button class="parallax__layer button" type="button" data-speed="0.05">
+          Стать енотом
+        </button>
+
+        <div class="parallax__layer circle" data-speed="0.18"></div>
+      </div>
+    </div> -->
+
     <!-- Футер -->
     <footer class="footer">
       <div class="container">
@@ -776,6 +806,14 @@
       </div>
     </footer>
     <!-- /Футер -->
+
+    <!-- Экран загрузки -->
+
+    <!-- <div class="loader-bg">
+      <div class="loader-content">
+        <span class="loader-item"></span>
+      </div>
+    </div> -->
 
     <!-- Кнопка наверх -->
     <div class="btn-scroll">
@@ -833,6 +871,25 @@
         <div class="form-content__link">
           Нажимая на кнопку, вы соглашаетесь
           <a href="">с политикой конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup успешная отправка -->
+
+    <div class="modal-success">
+      <div class="modal-success__content">
+        <div class="modal-success__close">
+          <img src="./image/close-modal.svg" alt="" />
+        </div>
+        <div class="modal-success_wrapper">
+          <div class="success-wrapper__img">
+            <img src="./image/success.png" alt="" />
+          </div>
+          <div class="success-wrapper__text">
+            <!-- <span>Спасибо!</span> <br /> -->
+            Ваша заявка успешно отправлена.
+          </div>
         </div>
       </div>
     </div>

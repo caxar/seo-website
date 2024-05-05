@@ -165,7 +165,7 @@
     display: none;
   }
   .stage-wrapper__item {
-    padding: 7px;
+    padding: 7px 19px;
   }
   .accordion.active {
     height: 100%;
@@ -180,6 +180,6 @@
     padding: 40px 15px;
   }
   .rates-nav__link {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }
