@@ -1409,6 +1409,23 @@ body.sidebar-opened {
   display: flex;
   justify-content: space-between;
 }
+
+.research-wrapper__item.cloud {
+  height: 250px !important;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.cloud-word {
+  position: relative;
+}
+
+#wordCloud {
+  position: absolute !important;
+}
+
 .research-item__left {
   display: flex;
   width: 40%;
@@ -1463,7 +1480,7 @@ body.sidebar-opened {
   text-wrap: balance;
 }
 
-#wordCloud {
+/* #wordCloud {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1471,8 +1488,9 @@ body.sidebar-opened {
 
 span {
   margin: 5px;
-  font-weight: bold;
-}
+  font-weight: bold; */
+/* 
+} */
 
 /* Стили модального окна */
 .modal {

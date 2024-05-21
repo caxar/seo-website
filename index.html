@@ -127,48 +127,6 @@
     </div>
 
     <!-- /Hero -->
-    <section class="research">
-      <div class="container">
-        <div class="research-title section-title">
-          Результат <span>проверки</span>
-        </div>
-        <div class="research-wrapper">
-          <div class="research-wrapper__item">
-            <div class="research-item__left">
-              <div class="research-item__status">
-                <div class="research-status--resolve">
-                  <img src="./image/services-check.svg" alt="" />
-                </div>
-                <div class="research-status--reject">
-                  <img src="./image/reject-icon.svg" alt="" />
-                </div>
-              </div>
-              <!-- /.status -->
-              <div class="research-item__title">Код ответа сервера</div>
-            </div>
-            <div class="research-item__right">
-              <div class="research-item__info">
-                Cтроительный инструмент и оборудование Севастополе Симферополе и
-                других городах Крыма - магазин инструмента Проммаркет
-              </div>
-              <div class="research-item__banner--info bad">
-                Плохо. Длина Title: 118. В идеале, заголовок страницы должен
-                содержать от 10 до 70 символов (вместе с пробелами).
-              </div>
-              <div class="research-item__improvements">
-                Title – это HTML-элемент, в сжатом формате рассказывающий
-                поисковым системам и посетителям о том, что происходит на данной
-                странице сайта. Он отображается во вкладке браузера, а также
-                виден в поисковых системах при удовлетворяющем запросе.
-              </div>
-            </div>
-          </div>
-          <!-- <div class="research-wrapper__item">
-            <div id="wordCloud"></div>
-          </div> -->
-        </div>
-      </div>
-    </section>
 
     <!-- Приемущества -->
 
@@ -256,6 +214,59 @@
     </div>
 
     <!-- /Приемущества -->
+
+    <!-- Блок результат проверки -->
+    <section class="research">
+      <div class="container">
+        <div class="research-title section-title">
+          Результат <span>проверки</span>
+        </div>
+        <div class="research-wrapper">
+          <div class="research-wrapper__item">
+            <div class="research-item__left">
+              <div class="research-item__status">
+                <div class="research-status--resolve">
+                  <img src="./image/services-check.svg" alt="" />
+                </div>
+                <div class="research-status--reject">
+                  <img src="./image/reject-icon.svg" alt="" />
+                </div>
+              </div>
+              <!-- /.status -->
+              <div class="research-item__title">Код ответа сервера</div>
+            </div>
+            <div class="research-item__right">
+              <div class="research-item__info">
+                Cтроительный инструмент и оборудование Севастополе Симферополе и
+                других городах Крыма - магазин инструмента Проммаркет
+              </div>
+              <div class="research-item__banner--info bad">
+                Плохо. Длина Title: 118. В идеале, заголовок страницы должен
+                содержать от 10 до 70 символов (вместе с пробелами).
+              </div>
+              <div class="research-item__improvements">
+                Title – это HTML-элемент, в сжатом формате рассказывающий
+                поисковым системам и посетителям о том, что происходит на данной
+                странице сайта. Он отображается во вкладке браузера, а также
+                виден в поисковых системах при удовлетворяющем запросе.
+              </div>
+            </div>
+          </div>
+          <div class="research-wrapper__item cloud">
+            <div class="research-left">
+              <div class="research-item__title">Облако ключевых слов</div>
+            </div>
+            <div class="research-right">
+              <div class="cloud-word">
+                <div id="wordCloud"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /.Результат проверки  -->
 
     <!-- Наши услуги -->
 
@@ -861,8 +872,69 @@
       AOS.init();
     </script>
 
-    <!-- Облако ключевых слов тест -->
+    <script src="./js/JQWCloud.js"></script>
+
     <script>
+      $(document).ready(function () {
+        let data = [
+          {
+            word: "русификация",
+            weight: 44,
+          },
+          {
+            word: "груша",
+            weight: 22,
+          },
+          {
+            word: "прошивка",
+            weight: 12,
+          },
+          {
+            word: "машина",
+            weight: 1,
+          },
+          {
+            word: "яблоко",
+            weight: 5,
+          },
+          {
+            word: "яблоко",
+            weight: 25,
+          },
+          {
+            word: "собака",
+            weight: 55,
+          },
+          {
+            word: "Ласточка",
+            weight: 21,
+          },
+          {
+            word: "Моторо",
+            weight: 10,
+          },
+          {
+            word: "Джип",
+            weight: 38,
+          },
+          {
+            word: "Рога",
+            weight: 13,
+          },
+          {
+            word: "Жора",
+            weight: 10,
+          },
+        ];
+
+        $("#wordCloud").jQWCloud({
+          words: data,
+        });
+      });
+    </script>
+
+    <!-- Облако ключевых слов тест -->
+    <!-- <script>
       $(document).ready(function () {
         let data = [
           {
@@ -920,7 +992,9 @@
           });
           cloud.append(span);
         });
-      });
-    </script>
+      }); -->
+    <!-- </script> -->
+
+    <script></script>
   </body>
 </html>

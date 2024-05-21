@@ -166,6 +166,15 @@
   .hero-right__title {
     font-size: 22px;
   }
+  .research-wrapper__item.cloud {
+    grid-template-columns: unset;
+  }
+  .cloud-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 425px) {
   .hero-active__btn {
