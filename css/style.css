@@ -15,6 +15,7 @@
   --purple-color-second: #5114ff;
   --green-color: #2dca74;
   --blue-color: #2961f6;
+  --red-color: #f94144;
 }
 
 html,
@@ -1390,9 +1391,91 @@ body.sidebar-opened {
   padding: 10px;
 }
 
+/* Стили для блока Результат проверки */
+
+.research-wrapper {
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.research-wrapper__item {
+  border-bottom: 1px solid var(--gray-color);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.research-item__left {
+  display: flex;
+  width: 40%;
+  padding: 0px 20px 0 0;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.research-item__right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.research-item__status {
+}
+.research-item__status img {
+  width: 30px;
+}
+.research-status--resolve {
+}
+.research-status--reject {
+}
+.research-item__title {
+  font-weight: 600;
+}
+.research-item__info {
+  text-wrap: balance;
+  font-weight: 500;
+}
+.research-item__banner--info {
+  color: var(--white-color);
+  font-weight: 500;
+  padding: 10px;
+  background: transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.research-item__banner--info.success {
+  background: var(--green-color);
+}
+.research-item__banner--info.bad {
+  background: var(--red-color);
+}
+
+.research-item__improvements {
+  border-left: 2px solid var(--gray-color);
+  padding: 10px;
+  text-wrap: balance;
+}
+
+#wordCloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+span {
+  margin: 5px;
+  font-weight: bold;
+}
+
 /* Стили модального окна */
-.modal,
-.modal-success {
+.modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -1499,6 +1582,27 @@ body.sidebar-opened {
 }
 
 /* Стили блока успешная отправка */
+
+.modal-success {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 20;
+}
+
+.show-modal__sucssess {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
 
 .modal-success__content {
   position: absolute;

@@ -127,98 +127,48 @@
     </div>
 
     <!-- /Hero -->
-    <!-- ---------------------------------------------------------------- -->
-    <!-- <section class="featured-section">
+    <section class="research">
       <div class="container">
-        <div class="featired-title section-title">
+        <div class="research-title section-title">
           Результат <span>проверки</span>
         </div>
-        <div id="response_an_text">
-          <table class="sortTableMiniNew table table-striped table-bordered">
-            <thead>
-              <tr>
-                <th style="" data-field="0">
-                  <div class="th-inner">Статус</div>
-                  <div class="fht-cell"></div>
-                </th>
-                <th style="" data-field="1">
-                  <div class="th-inner">Тип</div>
-                  <div class="fht-cell"></div>
-                </th>
-                <th style="" data-field="2">
-                  <div class="th-inner">Результат</div>
-                  <div class="fht-cell"></div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="collapse-table check-services" data-index="0">
-                <td>
-                  <div class="value-ok fa fa-check-circle-o">
-                    <div class="check-services__status fullfilled">
-                      <img src="./image/services-check.svg" alt="" />
-                    </div>
-                    <div class="check-services__status resolve">
-                      <img src="./image/reject-icon.svg" alt="" />
-                    </div>
-                  </div>
-                </td>
-                <td class="compare check-services__title">
-                  Код ответа сервера
-                </td>
-
-                <td class="check-services__text">
-                  <p class="check-services__subtitle">200</p>
-                  <pre class="check-text__fullfiled">
-Отлично. Успешный запрос ресурса.</pre
-                  >
-                  <div id="title" class="alert-message alert-message-success">
-                    Title – это HTML-элемент, в сжатом формате рассказывающий
-                    поисковым системам и посетителям о том, что происходит на
-                    данной странице сайта. Он отображается во вкладке браузера,
-                    а также виден в поисковых системах при удовлетворяющем
-                    запросе.
-                  </div>
-                </td>
-              </tr>
-
-              <tr class="collapse-table" data-index="0">
-                <td>
-                  <div class="value-ok fa fa-check-circle-o">
-                    <div class="check-services__status resolve">
-                      <img src="./image/reject-icon.svg" alt="" />
-                    </div>
-                  </div>
-                </td>
-                <td class="compare check-services__title">
-                  Заголовок страницы (Title)
-                </td>
-
-                <td class="check-services__text">
-                  <p class="check-services__subtitle">
-                    Cтроительный инструмент и оборудование Севастополе
-                    Симферополе и других городах Крыма - магазин инструмента
-                    Проммаркет
-                  </p>
-                  <pre class="check-text__reject">
-Плохо. Длина Title: 118. В идеале, заголовок страницы должен содержать от 10 до 70 символов (вместе с пробелами).</pre
-                  >
-
-                  <div id="title" class="alert-message alert-message-success">
-                    Title – это HTML-элемент, в сжатом формате рассказывающий
-                    поисковым системам и посетителям о том, что происходит на
-                    данной странице сайта. Он отображается во вкладке браузера,
-                    а также виден в поисковых системах при удовлетворяющем
-                    запросе.
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="research-wrapper">
+          <div class="research-wrapper__item">
+            <div class="research-item__left">
+              <div class="research-item__status">
+                <div class="research-status--resolve">
+                  <img src="./image/services-check.svg" alt="" />
+                </div>
+                <div class="research-status--reject">
+                  <img src="./image/reject-icon.svg" alt="" />
+                </div>
+              </div>
+              <!-- /.status -->
+              <div class="research-item__title">Код ответа сервера</div>
+            </div>
+            <div class="research-item__right">
+              <div class="research-item__info">
+                Cтроительный инструмент и оборудование Севастополе Симферополе и
+                других городах Крыма - магазин инструмента Проммаркет
+              </div>
+              <div class="research-item__banner--info bad">
+                Плохо. Длина Title: 118. В идеале, заголовок страницы должен
+                содержать от 10 до 70 символов (вместе с пробелами).
+              </div>
+              <div class="research-item__improvements">
+                Title – это HTML-элемент, в сжатом формате рассказывающий
+                поисковым системам и посетителям о том, что происходит на данной
+                странице сайта. Он отображается во вкладке браузера, а также
+                виден в поисковых системах при удовлетворяющем запросе.
+              </div>
+            </div>
+          </div>
+          <!-- <div class="research-wrapper__item">
+            <div id="wordCloud"></div>
+          </div> -->
         </div>
       </div>
-    </section> -->
-    <!-- ---------------------------------------------------------------- -->
+    </section>
 
     <!-- Приемущества -->
 
@@ -909,6 +859,68 @@
     <!-- Инициализация AOS анимации -->
     <script>
       AOS.init();
+    </script>
+
+    <!-- Облако ключевых слов тест -->
+    <script>
+      $(document).ready(function () {
+        let data = [
+          {
+            русификация: 44,
+            прошивка: 26,
+            магнитола: 21,
+            груша: 13,
+            машина: 1,
+            яблоко: 55,
+            саженец: 22,
+            собака: 42,
+            ястреб: 20,
+          },
+        ];
+
+        let wordsArray = [];
+        data.forEach((item) => {
+          for (const [key, value] of Object.entries(item)) {
+            for (let i = 0; i < value; i++) {
+              wordsArray.push(key);
+            }
+          }
+        });
+
+        let wordCounts = {};
+        for (let i = 0; i < wordsArray.length; i++) {
+          let word = wordsArray[i];
+          if (!wordCounts[word]) {
+            wordCounts[word] = 1;
+          } else {
+            wordCounts[word]++;
+          }
+        }
+
+        let cloud = $("#wordCloud");
+
+        let mostUsedWords = Object.keys(wordCounts).sort(
+          (a, b) => wordCounts[b] - wordCounts[a]
+        );
+        let middleIndex = Math.floor(mostUsedWords.length / 2);
+
+        mostUsedWords.forEach((word, index) => {
+          let size = wordCounts[word] < 20 ? wordCounts[word] * 5 : 100;
+          let color =
+            index === middleIndex
+              ? "orange"
+              : index % 2 === 0
+              ? "green"
+              : "blue";
+
+          let span = $("<span>").text(word);
+          span.css({
+            fontSize: `${size}px`,
+            color: color,
+          });
+          cloud.append(span);
+        });
+      });
     </script>
   </body>
 </html>

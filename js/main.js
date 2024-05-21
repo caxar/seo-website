@@ -207,25 +207,23 @@ window.addEventListener("click", windowOnClick);
 
 // Открытие и закрытие модального Успешная отправка данных
 let modalSucsess = document.querySelector(".modal-success");
-// let trigger = document.querySelector(".header-links__btn");
-// let triggerSecond = document.querySelector(".mobile-content__link");
 let closeBtnSuccess = document.querySelector(".modal-success__close");
 
-function toggleModal() {
-  modalSucsess.classList.toggle("show-modal");
+function toggleModalSuccess() {
+  modalSucsess.classList.toggle("show-modal__sucssess");
   $(".hidden-overley").removeClass("show");
 }
 
-function windowOnClick(event) {
+function windowOnClickSuccess(event) {
   if (event.target === modalSucsess) {
-    toggleModal();
+    toggleModalSuccess();
   }
 }
 
 // trigger.addEventListener("click", toggleModal);
 // triggerSecond.addEventListener("click", toggleModal);
 closeBtnSuccess.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
+window.addEventListener("click", windowOnClickSuccess);
 
 // ДЛя parallax эффекта картинок
 
