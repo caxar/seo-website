@@ -855,6 +855,15 @@
       </div>
     </div>
 
+    <!-- Loader при анлизе сайта -->
+    <div class="loader-process">
+      <div class="progress"></div>
+      <div class="words">
+        <div class="loader-words__item">Идет проверка....</div>
+        <div class="count">0%</div>
+      </div>
+    </div>
+
     <!-- Скрипты -->
     <!-- JQEURY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -872,6 +881,7 @@
       AOS.init();
     </script>
 
+    <!-- Скрипт для облака слов -->
     <script src="./js/JQWCloud.js"></script>
 
     <script>
@@ -995,6 +1005,46 @@
       }); -->
     <!-- </script> -->
 
-    <script></script>
+    <!-- Скрипт loader при анализе сайта -->
+    <script>
+      $(document).ready(function () {
+        var words = ["Проверка ошибок", "сбор ключевых слов", "Проверка SEO"]; // Массив слов
+        var currentIndex = 0;
+        let progressive = 0;
+
+        $(".hero-active__btn").click(function () {
+          $(".loader-process").fadeIn();
+          $(".progress").animate({ width: "100%" }, 5000, function () {
+            clearInterval(interval);
+            $(".count").text("100%");
+            $(".loader-process").fadeOut();
+            $(".research").fadeIn();
+            $("html, body").animate(
+              {
+                scrollTop: $(".research").offset().top,
+              },
+              1000
+            );
+          });
+
+          var interval = setInterval(function () {
+            progressive++;
+            $(".loader-words__item").text(words[currentIndex]);
+            currentIndex++;
+            if (currentIndex >= words.length) {
+              currentIndex = 0;
+            }
+          }, 1000);
+
+          var intervalCount = setInterval(function () {
+            progressive++;
+            $(".count").text(progressive + "%");
+            if (progressive >= 100) {
+              clearInterval(intervalCount);
+            }
+          }, 50);
+        });
+      });
+    </script>
   </body>
 </html>
