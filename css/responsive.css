@@ -213,4 +213,7 @@
   .success-wrapper__img {
     width: 80px;
   }
+  .research-item__info {
+    font-size: 14px;
+  }
 }

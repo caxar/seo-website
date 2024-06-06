@@ -110,6 +110,7 @@
                 />
               </button>
             </div>
+            <div class="hero-right__hidden">Заполните поля для анализа</div>
           </div>
         </div>
         <!--  -->
@@ -1008,41 +1009,59 @@
     <!-- Скрипт loader при анализе сайта -->
     <script>
       $(document).ready(function () {
-        var words = ["Проверка ошибок", "сбор ключевых слов", "Проверка SEO"]; // Массив слов
-        var currentIndex = 0;
-        let progressive = 0;
+        var words = ["Проверка ошибок", "сбор ключевых слов", "Проверка SEO"]; // Массив слов вывода на экран
+        var inputVal = $(".hero-active__input").val();
+        var isProcessActive = false;
 
         $(".hero-active__btn").click(function () {
-          $(".loader-process").fadeIn();
-          $(".progress").animate({ width: "100%" }, 5000, function () {
-            clearInterval(interval);
-            $(".count").text("100%");
-            $(".loader-process").fadeOut();
-            $(".research").fadeIn();
-            $("html, body").animate(
-              {
-                scrollTop: $(".research").offset().top,
-              },
-              1000
-            );
-          });
+          if ($(".hero-active__input").val() !== "") {
+            if (!isProcessActive) {
+              isProcessActive = true;
+              $(".loader-process").fadeIn();
 
-          var interval = setInterval(function () {
-            progressive++;
-            $(".loader-words__item").text(words[currentIndex]);
-            currentIndex++;
-            if (currentIndex >= words.length) {
-              currentIndex = 0;
-            }
-          }, 1000);
+              var currentIndex = 0;
+              var progressive = 0;
 
-          var intervalCount = setInterval(function () {
-            progressive++;
-            $(".count").text(progressive + "%");
-            if (progressive >= 100) {
-              clearInterval(intervalCount);
+              $(".progress").stop().css("width", "0%");
+              $(".count").text("0%");
+              progressive = 0;
+
+              $(".progress").animate({ width: "100%" }, 5000, function () {
+                clearInterval(interval);
+                $(".count").text("100%");
+                $(".loader-process").fadeOut();
+                $(".research").fadeIn();
+                $(".hero-active__input").val("");
+                $("html, body").animate(
+                  {
+                    scrollTop: $(".research").offset().top,
+                  },
+                  1000
+                );
+                isProcessActive = false;
+              });
+
+              var interval = setInterval(function () {
+                progressive++;
+                $(".loader-words__item").text(words[currentIndex]);
+                currentIndex++;
+                if (currentIndex >= words.length) {
+                  currentIndex = 0;
+                }
+              }, 1000);
+
+              var intervalCount = setInterval(function () {
+                progressive++;
+                $(".count").text(progressive + "%");
+                if (progressive >= 100) {
+                  clearInterval(intervalCount);
+                }
+              }, 50);
             }
-          }, 50);
+            $(".hero-right__hidden").removeClass("--is-active");
+          } else {
+            $(".hero-right__hidden").addClass("--is-active");
+          }
         });
       });
     </script>

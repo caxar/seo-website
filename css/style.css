@@ -380,7 +380,7 @@ section {
 
 .hero-wrapper {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .hero-wrapper-left {
@@ -431,6 +431,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding-bottom: 20px;
 }
 
 .hero-right__title {
@@ -472,9 +473,41 @@ section {
   background: var(--black-color-second);
   color: var(--white-color);
 }
+/* 
+.hero-active__btn.incorrect {
+  background: var(--gray-color);
+  pointer-events: none;
+} */
 
 .hero-btn__icon {
   display: none;
+}
+
+.hero-right__hidden {
+  color: var(--green-color);
+  display: none;
+  /* position: absolute;
+  bottom: -50px;
+  left: 0;
+  background: var(--black-color-second);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px; */
+}
+/* .hero-right__hidden::after {
+  content: "";
+  position: absolute; 
+  left: 105px;
+  top: -18px; /
+  border: 10px solid transparent;
+  border-bottom: 10px solid var(--black-color-second);
+} */
+
+.hero-right__hidden.--is-active {
+  display: block;
 }
 
 /* Стили Основные приемущества */
@@ -1395,6 +1428,7 @@ body.sidebar-opened {
 
 .research {
   display: none;
+  padding-top: 100px;
 }
 
 .research.is-proccess {
@@ -1469,6 +1503,7 @@ body.sidebar-opened {
 .research-item__info {
   text-wrap: balance;
   font-weight: 500;
+  word-break: break-all;
 }
 .research-item__banner--info {
   color: var(--white-color);
@@ -1480,6 +1515,7 @@ body.sidebar-opened {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  word-break: break-all;
 }
 .research-item__banner--info.success {
   background: var(--green-color);
